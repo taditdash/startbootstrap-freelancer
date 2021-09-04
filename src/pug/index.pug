@@ -8,10 +8,10 @@ html(lang='en')
         meta(name='description', content='')
         meta(name='author', content='')
 
-        title Freelancer - Start Bootstrap Theme
+        title Tadit Dash - Software Engineer | Author | TEDx Speaker | Trainer
 
         // Favicon
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+        link(rel='icon', type='image/x-icon', href='assets/favicon-even-more-bold-01-1024x1024.png')
 
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
@@ -28,16 +28,18 @@ html(lang='en')
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.bg-secondary.text-uppercase.fixed-top
             .container
-                a.navbar-brand(href='#page-top') Start Bootstrap
+                a.navbar-brand(href='#page-top')
+                    img(src='./assets/img/Tadit-Dash-Logo-Dark-Small-1024x552.png' height='60px')
+                    | Tadit Dash
                 button.navbar-toggler.text-uppercase.font-weight-bold.bg-primary.text-white.rounded(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu 
                     i.fas.fa-bars
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto
                         li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded(href='#portfolio') Portfolio
+                                a.nav-link.py-3.px-0.px-lg-3.rounded(href='#about') About
                         li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded(href='#about') About
+                            a.nav-link.py-3.px-0.px-lg-3.rounded(href='#books') Books
                         li.nav-item.mx-0.mx-lg-1
                             a.nav-link.py-3.px-0.px-lg-3.rounded(href='#contact') Contact
 
@@ -47,7 +49,7 @@ html(lang='en')
                 // Masthead Avatar Image
                 img.masthead-avatar.mb-5(src='assets/img/avataaars.svg', alt='...')
                 // Masthead Heading
-                h1.masthead-heading.text-uppercase.mb-0 Start Bootstrap
+                h1.masthead-heading.text-uppercase.mb-0 Tadit Dash
                 // Icon Divider
                 .divider-custom.divider-light
                     .divider-custom-line
@@ -55,10 +57,59 @@ html(lang='en')
                         i.fas.fa-star
                     .divider-custom-line
                 // Masthead Subheading
-                p.masthead-subheading.font-weight-light.mb-0 Graphic Artist - Web Designer - Illustrator
+                p.masthead-subheading.font-weight-light.mb-0 Software Engineer | Author | TEDx Speaker | Trainer
+
+        // Books Section
+        section#books.page-section.portfolio
+            .container
+                // Books Section Heading
+                h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Books
+                // Icon Divider
+                .divider-custom
+                    .divider-custom-line
+                    .divider-custom-icon
+                        i.fas.fa-star
+                    .divider-custom-line
+                // Portfolio Grid Items
+                .row.justify-content-center
+                    // Portfolio Item 1
+                    .col-md-6.col-lg-4.mb-2
+                        .card
+                            img.card-img-top(src='./assets/img/books/VueJs.jpeg' alt='Learn Vue.Js in 7 Days' style='width: 87.5% !important')
+                            .card-body
+                                h5.card-title Learn Vue.Js in 7 Days
+                                p.card-text
+                                    | Vue.js is one of the quickly growing Javascript frameworks, which can be used on any scale of the project to help the stakeholders in the rapid application development process.
+                                    | The good thing with Vue.js is that it is lightweight
+                                    a.card-link(href="#") Read More
+                                div.text-center
+                                    a.btn.btn-lg.btn-primary(href='https://www.amazon.com/gp/product/9388511867/ref=dbs_a_def_rwt_bibl_vppi_i1') Buy Now
+                    // Portfolio Item 2
+                    .col-md-6.col-lg-4.mb-2
+                        .card
+                            img.card-img-top(src='./assets/img/books/Building-RESTful-Web-services-with-.NET-Core-Cover-by-Gaurav-Aroraa-and-Tadit-Dash.png' alt='Building RESTful Web services with .NET Core')
+                            .card-body
+                                h5.card-title Building RESTful Web services with .NET Core
+                                p.card-text
+                                    | REST is an architectural style that tackles the challenges of building scalable web services. In today’s connected world, APIs have taken a central role on the web
+                                    a.card-link(href="#") Read More
+                                div.text-center
+                                    a.btn.btn-lg.btn-primary(href='https://www.amazon.com/gp/product/1788291573/ref=dbs_a_def_rwt_bibl_vppi_i0') Buy Now
+                    // Portfolio Item 3
+                    .col-md-6.col-lg-4
+                        .card
+                            img.card-img-top(src='./assets/img/books/Dependency-Injection-in-.NET-Core-2.0.jpg' alt='Dependency Injection in .NET Core 2.0')
+                            .card-body
+                                h5.card-title Dependency Injection in .NET Core 2.0
+                                p.card-text
+                                    | Make use of constructors, parameters, setters, and interface injection to write reusable and loosely-coupled code.
+                                    | NET Core provides more control
+                                    a.card-link(href="#") Read More
+                                div.text-center
+                                    a.btn.btn-lg.btn-primary(href='https://www.amazon.com/Dependency-Injection-NET-Core-loosely-coupled/dp/1787121305/ref=sr_1_1?keywords=Dependency+Injection+in+.NET+Core+2.0&qid=1569237093&s=gateway&sr=8-1') Buy Now
 
         // Portfolio Section
-        section#portfolio.page-section.portfolio
+        //- section#portfolio.page-section.portfolio
             .container
                 // Portfolio Section Heading
                 h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Portfolio
@@ -128,19 +179,34 @@ html(lang='en')
                 .row
                     .col-lg-4.ms-auto
                         p.lead
-                            | Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.
+                            | Tadit Dash is an Indian by heart, a Software Engineer by profession, an Author and a Speaker by passion.
                     .col-lg-4.me-auto
-                        p.lead
-                            | You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!
+                        figure.bg-secondary.p-4
+                            blockquote.blockquote
+                                p.pb-2
+                                    | "I believe in working for the community in terms of sharing knowledge, which not only keeps me motivated all the time but also pushes me to challenges."
+                            figcaption.blockquote-footer.mb-0
+                                | Tadit Dash
+
                 // About Section Button
                 .text-center.mt-4
-                    a.btn.btn-xl.btn-outline-light(href='https://startbootstrap.com/theme/freelancer/')
-                        i.fas.fa-download.me-2
-                        | Free Download!
+                    button.btn.btn-xl.btn-outline-light(data-bs-target='#fullBio', data-bs-toggle='collapse', aria-expanded="false" aria-controls="fullBio")
+                        i.fas.fa-arrow-down.me-2
+                        | Read More
+                .row.mt-4
+                    .col-lg-8.m-auto
+                        div#fullBio.collapse
+                            p.lead
+                                | As a software engineer, he usually works for eight to nine hours daily.
+                            p.lead
+                                | Besides his daily work, he contributes to both online and offline communities. He co-founded the first Technical Community in his state named Utkal Techies Forum (formerly Microsoft Developers Community Odisha), which is devoted to spreading awareness of the newest trends in technology among developers.
+                            p.lead
+                                | This community organizes events and workshops in orphanages, schools, and colleges. Due to his exceptional contribution to the technical community, Microsoft has awarded him with the Microsoft Most Valuable Professional accolade since 2014. CodeProject has awarded him the CodeProject MVP accolade (the first from Odisha).
+                            p.lead
+                                | For his constant mentorship, IndiaMentor featured him as a Young Mentor on their site. He was a featured speaker at DevTechDay Nepal and C# Corner Annual Conference, India. Motivating students in his sessions is something he is popular for. He is a regular technical and motivational speaker.
 
-        // Contact Section
         section#contact.page-section
-            .container
+            .container.d-flex.align-items-center.flex-column
                 // Contact Section Heading
                 h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Contact Me
                 // Icon Divider
@@ -149,125 +215,67 @@ html(lang='en')
                     .divider-custom-icon
                         i.fas.fa-star
                     .divider-custom-line
-                // Contact Section Form
-                .row.justify-content-center
-                    .col-lg-8.col-xl-7
-
-                        // * * * * * * * * * * * * * * *
-                        // * * SB Forms Contact Form * *
-                        // * * * * * * * * * * * * * * *
-
-                        // This form is pre-integrated with SB Forms.
-                        // To make this form functional, sign up at
-                        // https://startbootstrap.com/solution/contact-forms
-                        // to get an API token!
-
-                        form#contactForm(data-sb-form-api-token='API_TOKEN')
-
-                            // Name input
-                            .form-floating.mb-3
-                                input#name.form-control(
-                                    type='text',
-                                    placeholder='Enter your name...',
-                                    data-sb-validations='required'
-                                )
-                                label(for='name') Full name
-                                .invalid-feedback(data-sb-feedback='name:required')
-                                    | A name is required.
-
-                            // Email address input
-                            .form-floating.mb-3
-                                input#email.form-control(
-                                    type='email',
-                                    placeholder='name@example.com',
-                                    data-sb-validations='required,email'
-                                )
-                                label(for='email') Email address
-                                .invalid-feedback(data-sb-feedback='email:required')
-                                    | An email is required.
-                                .invalid-feedback(data-sb-feedback='email:email')
-                                    | Email is not valid.
-
-                            // Phone number input
-                            .form-floating.mb-3
-                                input#phone.form-control(
-                                    type='tel',
-                                    placeholder='(123) 456-7890',
-                                    data-sb-validations='required'
-                                )
-                                label(for='phone') Phone number
-                                .invalid-feedback(data-sb-feedback='phone:required')
-                                    | A phone number is required.
-
-                            // Message input
-                            .form-floating.mb-3
-                                textarea#message.form-control(
-                                    type='text',
-                                    placeholder='Enter your message here...',
-                                    style='height: 10rem;',
-                                    data-sb-validations='required'
-                                )
-                                label(for='message') Message
-                                .invalid-feedback(data-sb-feedback='message:required')
-                                    | A message is required.
-
-                            // Submit success message
-                            //
-                            // This is what your users will see when the form
-                            // has successfully submitted
-
-                            #submitSuccessMessage.d-none
-                                .text-center.mb-3
-                                    .fw-bolder Form submission successful!
-                                    | To activate this form, sign up at
-                                    br
-                                    a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
-
-                            // Submit error message
-                            //
-                            // This is what your users will see when there is
-                            // an error submitting the form
-
-                            #submitErrorMessage.d-none
-                                .text-center.text-danger.mb-3 Error sending message!
-
-                            // Submit Button
-                            button#submitButton.btn.btn-primary.btn-xl.disabled(type='submit') Send
-
+                p.lead.mb-0
+                    i.fas.fa-envelope
+                    a(href='mailto:taditdash@gmail.com' style='margin-left: 10px')
+                        | taditdash@gmail.com
+                    br
+                    i.fas.fa-phone-alt
+                    a(href='tel:+919132994288' style='margin-left: 10px')
+                        | (+91)9132994288
+        
         // Footer
         footer.footer.text-center
             .container
                 .row
                     // Footer Location
                     .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Location
-                        p.lead.mb-0
-                            | 2215 John Daniel Drive
+                        h4.text-uppercase.mb-4 Recent Blogs
+                        p.mb-0
+                            | Design is a process!
                             br
-                            | Clark, MO 65243
+                            hr
+                            | Vuetify Clear Fields on Dialog Open
+                            br
+                            hr
+                            | Do you know that null is an object in JavaScript?
+                            br
+                            hr
+                            | Vuetify Rounded Card Design
+                            br
+                            hr
+                            | Building RESTful Web services with .NET Core made it to the Best REST API Books of All Time
                     // Footer Social Icons
                     .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Around the Web
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-facebook-f
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
+                        h4.text-uppercase.mb-4 Let's Connect
+                        a.btn.btn-outline-light.btn-social.mx-1(target='_blank', href='http://twitter.com/taditdash')
                             i.fab.fa-fw.fa-twitter
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
+                        a.btn.btn-outline-light.btn-social.mx-1(target='_blank', href='http://linkedin.com/in/taditdash')
                             i.fab.fa-fw.fa-linkedin-in
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-dribbble
+                        a.btn.btn-outline-light.btn-social.mx-1(target='_blank', href='http://facebook.com/taditdash')
+                            i.fab.fa-fw.fa-facebook-f
+                        a.btn.btn-outline-light.btn-social.mx-1(target='_blank', href='http://instagram.com/taditdash')
+                            i.fab.fa-fw.fa-instagram
                     // Footer About Text
                     .col-lg-4
-                        h4.text-uppercase.mb-4 About Freelancer
+                        h4.text-uppercase.mb-4 Contact
+                        img.mb-4(src='./assets/img/Tadit-Dash-Logo-Dark-Small-1024x552.png' height='60px')
                         p.lead.mb-0
-                            | Freelance is a free to use, MIT licensed Bootstrap theme created by 
-                            a(href='http://startbootstrap.com') Start Bootstrap
-                            | .
+                            i.fas.fa-envelope
+                            a(href='mailto:taditdash@gmail.com' style='margin-left: 10px')
+                                | taditdash@gmail.com
+                            br
+                            i.fas.fa-phone-alt
+                            a(href='tel:+919132994288' style='margin-left: 10px')
+                                | (+91)9132994288
 
         // Copyright Section
         div.copyright.py-4.text-center.text-white
             .container
-                small Copyright &copy; Your Website 2021
+                small Copyright &copy; 
+                a(href='http://taditdash.co.in')
+                    | Tadit Dash
+                | 2021
 
         // Portfolio Modals
         include includes/portfolio-modal-1.pug
@@ -282,10 +290,3 @@ html(lang='en')
 
         // Core theme JS
         script(src='js/scripts.js')
-
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // * *                               SB Forms JS                               * *
-        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
