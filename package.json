@@ -10,7 +10,8 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start:debug": "npm run build && node scripts/start-debug.js",
+        "deploy": "gh-pages --dist 'dist'"
     },
     "description": "A freelancer portfolio HTML theme for Bootstrap.",
     "keywords": [
@@ -45,6 +46,7 @@
         "browser-sync": "2.27.5",
         "chokidar": "3.5.2",
         "concurrently": "6.2.0",
+        "gh-pages": "^3.2.3",
         "postcss": "8.3.6",
         "prettier": "2.3.2",
         "pug": "3.0.2",
