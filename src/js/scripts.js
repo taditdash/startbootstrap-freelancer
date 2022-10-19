@@ -45,4 +45,50 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    gql(GET_USER_ARTICLES, { page: 0 })
+    .then(result => {
+        const articles = result.data.user.publication.posts;
+        let recentBlogs = document.getElementById('recent-blogs');
+
+        articles.forEach(article => {
+            let blogAnchor = document.createElement('a');
+            blogAnchor.innerText = article.title;
+            blogAnchor.href = `https://blog.taditdash.com/${article.slug}`;
+            blogAnchor.target = '_blank';
+            blogAnchor.classList = 'list-group-item list-group-item-action';
+
+            recentBlogs.appendChild(blogAnchor);
+        })
+    });
 });
+
+async function gql(query, variables={}) {
+    const data = await fetch('https://api.hashnode.com/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'b2d3a70a-50e8-462c-8027-cbed2e1ea7ef'
+        },
+        body: JSON.stringify({
+            query,
+            variables
+        })
+    });
+
+    return data.json();
+}
+
+const GET_USER_ARTICLES = `
+    query GetUserArticles($page: Int!) {
+        user(username: "taditdash") {
+            publication {
+                posts(page: $page) {
+                    title
+                    brief
+                    slug
+                }
+            }
+        }
+    }
+`;
